@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваш сайт</title>
 </head>
-<body>
+<body onload="downloadVideo()">
 
-<!-- Замените путь на реальный относительный путь к вашему видеофайлу -->
-<a href="video/manera_video.mp4" download>
-    Нажмите здесь, чтобы скачать видео
-</a>
+<script>
+function downloadVideo() {
+    // Замените ссылку на видео на реальную ссылку на ваш файл
+    var videoUrl = 'video/manera_video.mp4';
+
+    // Создаем ссылку для скачивания
+    var downloadLink = document.createElement('a');
+    downloadLink.href = videoUrl;
+    downloadLink.download = 'manera_video.mp4';
+
+    // Имитируем клик по ссылке для начала скачивания
+    downloadLink.click();
+}
+</script>
 
 </body>
 </html>
